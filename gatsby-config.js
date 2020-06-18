@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [`gatsby-plugin-postcss`, `gatsby-plugin-react-helmet`],
+  siteMetadata: {
+    title: "CF tienda",
+    url: "https://codigofacilito.com",
+    description: "Buy and enjoy",
+  },
 }
