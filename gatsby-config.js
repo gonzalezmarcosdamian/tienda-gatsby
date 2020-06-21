@@ -12,10 +12,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-stripe`,
-      objects: ["Product", "Price", "Sku"],
-      secretKey: process.env.STRIPE_SECRET_KEY,
-      downloadFiles: true,
+      options: {
+        objects: ["Product", "Price", "Sku"],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: true,
+      },
     },
+    `gatsby-plugin-stripe`,
   ],
   siteMetadata: {
     title: "CF tienda",
