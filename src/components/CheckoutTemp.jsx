@@ -13,8 +13,8 @@ export default ({ price }) => {
     const response = await stripe.redirectToCheckout({
       lineItems: [{ price: `${price.id}`, quantity: 1 }],
       mode: "payment",
-      successUrl: `http://localhost/8000/completado`,
-      cancelUrl: `http://localhost/8000`,
+      successUrl: `http://localhost:8000/completado`,
+      cancelUrl: `http://localhost:8000`,
     })
     if (response.error) {
       console.log(response.error)
